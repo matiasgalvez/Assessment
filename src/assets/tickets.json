@@ -1,0 +1,97 @@
+{
+  "from": "Miami",
+  "to": "California",
+  "tickets": [
+    {
+      "brand": "Jet Blue",
+      "price": 306,
+      "flightDuration": 5.33,
+      "baggage": {
+        "carryOn": 0,
+        "checkedBag": 2
+      },
+      "baggageFee": {
+        "carryOn": 0,
+        "checkedBag": 20
+      }
+    },
+    {
+      "brand": "Spirit Airlines",
+      "price": 100,
+      "flightDuration": 11.29,
+      "baggage": {
+        "carryOn": 1,
+        "checkedBag": 1
+      },
+      "baggageFee": {
+        "carryOn": 10,
+        "checkedBag": 50
+      }
+    },
+    {
+      "brand": "American Airlines",
+      "price": 252,
+      "flightDuration": 5.11,
+      "baggage": {
+        "carryOn": 1,
+        "checkedBag": 2
+      },
+      "baggageFee": {
+        "carryOn": 25,
+        "checkedBag": 100
+      }
+    },
+    {
+      "brand": "Jet Blue",
+      "price": 232,
+      "flightDuration": 5.02,
+      "baggage": {
+        "carryOn": 0,
+        "checkedBag": 2
+      },
+      "baggageFee": {
+        "carryOn": 0,
+        "checkedBag": 20
+      }
+    },
+    {
+      "brand": "American Airlines",
+      "price": 252,
+      "flightDuration": 4.57,
+      "baggage": {
+        "carryOn": 1,
+        "checkedBag": 2
+      },
+      "baggageFee": {
+        "carryOn": 25,
+        "checkedBag": 100
+      }
+    },
+    {
+      "brand": "Spirit Airlines",
+      "price": 250,
+      "flightDuration": 4.57,
+      "baggage": {
+        "carryOn": 0,
+        "checkedBag": 2
+      },
+      "baggageFee": {
+        "carryOn": 10,
+        "checkedBag": 50
+      }
+    },
+    {
+      "brand": "Jet Blue",
+      "price": 300,
+      "flightDuration": 5.02,
+      "baggage": {
+        "carryOn": 0,
+        "checkedBag": 2
+      },
+      "baggageFee": {
+        "carryOn": 0,
+        "checkedBag": 20
+      }
+    }
+  ]
+}

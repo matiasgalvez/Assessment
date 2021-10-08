@@ -1,0 +1,16 @@
+{
+  "Users": [
+    {
+      "FrequentFlyerNumber": "User1",
+      "Password": "test123",
+      "Name": "John",
+      "Surname": "Doe"
+    },
+    {
+      "FrequentFlyerNumber": "User2",
+      "Password": "test123",
+      "Name": "Jane",
+      "Surname": "Doe"
+    }
+  ]
+}

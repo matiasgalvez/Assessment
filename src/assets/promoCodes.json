@@ -1,0 +1,17 @@
+{
+  "promoFree":
+    {
+      "code": "free",
+      "discount": 1
+    },
+  "promo20":
+    {
+      "code": "promo20",
+      "discount": 0.20
+    },
+  "promo30":
+    {
+      "code": "promo30",
+      "discount": 0.30
+    }
+}

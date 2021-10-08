@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "test": "mocha --recursive --exit"
+  },
+  "dependencies": {
+    "chai": "^4.3.4",
+    "chai-shallow-deep-equal": "^1.4.6",
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.2"
+  }
+}

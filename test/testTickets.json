@@ -1,0 +1,54 @@
+{
+  "getShortestTicketsTestData": {
+    "firstCaseTickets": [
+      {
+        "brand": "Jet Blue",
+        "flightDuration": 3.5
+      },
+      {
+        "brand": "Spirit Airlines",
+        "flightDuration": 3.5
+      },
+      {
+        "brand": "American Airlines",
+        "flightDuration": 5
+      }
+    ],
+    "secondCaseTickets": [
+      {
+        "brand": "Jet Blue",
+        "flightDuration": 5.02
+      },
+      {
+        "brand": "Spirit Airlines",
+        "flightDuration": 11.29
+      }
+    ]
+  },
+  "getCheapestTicketTestData": {
+    "firstCaseTickets": [
+      {
+        "brand": "Jet Blue",
+        "price": 300.00000001
+      },
+      {
+        "brand": "Spirit Airlines",
+        "price": 300.01
+      },
+      {
+        "brand": "American Airlines",
+        "price": 500
+      }
+    ],
+    "secondCaseTickets": [
+      {
+        "brand": "Jet Blue",
+        "price": 300
+      },
+      {
+        "brand": "Spirit Airlines",
+        "price": 100
+      }
+    ]
+  }
+}
