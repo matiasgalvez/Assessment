@@ -18,27 +18,28 @@ let cheapestTicket = getCheapestTicket(shortestTickets);
 giveTicketDescription(cheapestTicket);
 giveTicketBaggageDescription(cheapestTicket);
 
-//Baggage functionality logic
+//Baggage management logic
 addExtraBaggage();
 
-//Promo code functionality logic
+//Promo code management logic
 promoCodeManagement();
 
+//Frequent Flyer account login logic
 frequentFlyerLogin();
 
 //Book ticket logic
 bookTicketCheck();
 
 function giveMultipleTicketDescription(tickets) {
-    console.log(consoleMessages.ticketOptions, options.from, options.to);
-    for(let i = 0; i < tickets.length; i++) {
-      console.log(consoleMessages.ticketDescription, i+1, tickets[i].brand, tickets[i].price,numberToTime(tickets[i].flightDuration))
-    }
+  console.log(consoleMessages.ticketOptions, options.from, options.to);
+  for(let i = 0; i < tickets.length; i++) {
+    console.log(consoleMessages.ticketDescription, i+1, tickets[i].brand, tickets[i].price,numberToTime(tickets[i].flightDuration))
+  }
 }
 
 function giveTicketDescription(ticket) {
-    console.log(consoleMessages.selectTicketOptions)
-    console.log(consoleMessages.ticketDescriptionWithoutOptionNumber, ticket.brand, ticket.price, numberToTime(ticket.flightDuration))
+  console.log(consoleMessages.selectTicketOptions)
+  console.log(consoleMessages.ticketDescriptionWithoutOptionNumber, ticket.brand, ticket.price, numberToTime(ticket.flightDuration))
 }
 
 function giveTicketBaggageDescription(ticket) {
@@ -59,7 +60,6 @@ function addExtraBaggage() {
       newTicketPrice = cheapestTicket.price;
       break; 
     case 'Y':
-    //Baggage Type functionality logic
       baggageTypeToAdd()
   }
 }
@@ -85,21 +85,21 @@ function baggageTypeToAdd() {
 
 function carryOnBaggageManagement(ticketPrice, baggageFee) {
   if(cheapestTicket.baggage.carryOn == 0) {
-      let extraBaggage = prompt(consoleMessages.carryOnBaggageAmountQuestion);
-      extraBaggage = Number(extraBaggage)
-      if(extraBaggage <= 0 || isNaN(extraBaggage)) {
-        console.log(consoleMessages.invalidInput)
+    let extraBaggage = prompt(consoleMessages.carryOnBaggageAmountQuestion);
+    extraBaggage = Number(extraBaggage)
+    if(extraBaggage <= 0 || isNaN(extraBaggage)) {
+      console.log(consoleMessages.invalidInput)
+      carryOnBaggageManagement(cheapestTicket.price, cheapestTicket.baggageFee.carryOn)
+    } else {
+      let baggageSum = cheapestTicket.baggage.carryOn + extraBaggage
+      if(baggageSum > 1) {
+        console.log(consoleMessages.maxCarryOnBaggageExceded)
         carryOnBaggageManagement(cheapestTicket.price, cheapestTicket.baggageFee.carryOn)
       } else {
-        let baggageSum = cheapestTicket.baggage.carryOn + extraBaggage
-        if(baggageSum > 1) {
-          console.log(consoleMessages.maxCarryOnBaggageExceded)
-          carryOnBaggageManagement(cheapestTicket.price, cheapestTicket.baggageFee.carryOn)
-        } else {
-          newTicketPrice = ticketPrice + (extraBaggage * baggageFee)
-          console.log(consoleMessages.addedCarryOnBags, extraBaggage, newTicketPrice)
-        }
+        newTicketPrice = ticketPrice + (extraBaggage * baggageFee)
+        console.log(consoleMessages.addedCarryOnBags, extraBaggage, newTicketPrice)
       }
+    }
   } else {
     console.log(consoleMessages.maxCarryOnBaggageReached)
   }
@@ -107,22 +107,22 @@ function carryOnBaggageManagement(ticketPrice, baggageFee) {
 }
 
 function checkedBaggageManagement(ticketPrice, baggageFee) {
-    console.log(consoleMessages.checkedBaggageAmountQuestion, cheapestTicket.baggage.checkedBag)
-    let extraBaggage = prompt();
-    extraBaggage = Number(extraBaggage)
-    if(extraBaggage <= 0 || isNaN(extraBaggage)) {
-      console.log(consoleMessages.invalidInput)
+  console.log(consoleMessages.checkedBaggageAmountQuestion, cheapestTicket.baggage.checkedBag)
+  let extraBaggage = prompt();
+  extraBaggage = Number(extraBaggage)
+  if(extraBaggage <= 0 || isNaN(extraBaggage)) {
+    console.log(consoleMessages.invalidInput)
+    checkedBaggageManagement(ticketPrice, cheapestTicket.baggageFee.checkedBag)
+  } else {
+    let baggageSum = cheapestTicket.baggage.checkedBag + extraBaggage
+    if(baggageSum > 3) {
+      console.log(consoleMessages.maxCheckedBaggageExceded)
       checkedBaggageManagement(ticketPrice, cheapestTicket.baggageFee.checkedBag)
     } else {
-      let baggageSum = cheapestTicket.baggage.checkedBag + extraBaggage
-      if(baggageSum > 3) {
-        console.log(consoleMessages.maxCheckedBaggageExceded)
-        checkedBaggageManagement(ticketPrice, cheapestTicket.baggageFee.checkedBag)
-      } else {
-        newTicketPrice = ticketPrice + (extraBaggage * baggageFee)
-        console.log(consoleMessages.addedCheckedBags, extraBaggage, newTicketPrice)
-      }
+      newTicketPrice = ticketPrice + (extraBaggage * baggageFee)
+      console.log(consoleMessages.addedCheckedBags, extraBaggage, newTicketPrice)
     }
+  }
 }
 
 function managementForBothBaggageTypes() {
@@ -143,7 +143,7 @@ function promoCodeManagement() {
       break;
     case 'Y':
       promoCodeSelection()
-    }
+  }
 }
 
 function promoCodeSelection() {
@@ -185,20 +185,19 @@ function ticketPriceRecalculationWithPromoFree(ticketPrice, discount) {
 }
 
 function frequentFlyerLogin() {
-  //Frequent Flyer functionality logic
-    let frequentFlyerUserExist = prompt(consoleMessages.frequentFlyerAccountQuestion);
-    switch (frequentFlyerUserExist) {
-    default:
-      console.log(consoleMessages.invalidInput)
-      frequentFlyerLogin();
+  let frequentFlyerUserExist = prompt(consoleMessages.frequentFlyerAccountQuestion);
+  switch (frequentFlyerUserExist) {
+  default:
+    console.log(consoleMessages.invalidInput)
+    frequentFlyerLogin();
+    break;
+    case 'N':
+      console.log(consoleMessages.notFrequentFlyerUser)
       break;
-      case 'N':
-        console.log(consoleMessages.notFrequentFlyerUser)
-        break;
-      case 'Y':
-        frequentFlyerAccountExistsCheck()
-        break;
-    }
+    case 'Y':
+      frequentFlyerAccountExistsCheck()
+      break;
+  }
 }
 
 function frequentFlyerAccountExistsCheck() {
@@ -218,7 +217,7 @@ function enterFrequentFlyerPassword() {
   } else {
     console.log(consoleMessages.wrongUsernameOrPassword)
     enterFrequentFlyerPassword()
-    }
+  }
 }
 
 function giveTicketDescriptionWithChangedPrice(tickets, price) {

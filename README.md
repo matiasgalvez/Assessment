@@ -31,7 +31,8 @@ For testing I'll use the Mocha framework in combination with the Chai assertion 
 - getCheapestTicket(shortestTickets)
 
 Installation and Execution
-1. Clone repository.
-2. npm install in terminal standing in root of repository.
-3. To run script, in terminal, stand in src folder and run "node ticketBooker.js".
-4. To run tests, run "npm test" in terminal.
+1. Install node v16.1.0 and npm.
+2. Clone repository.
+3. npm install in terminal standing in root of repository.
+4. To run script, in terminal, stand in src folder and run "node ticketBooker.js".
+5. To run tests, run "npm test" in terminal.
