@@ -34,6 +34,6 @@ For testing I'll use the Mocha framework in combination with the Chai assertion 
 Installation and Execution
 1. Install node v16.1.0 and npm.
 2. Clone repository.
-3. npm install in terminal standing in root of repository.
+3. Run "npm install" in terminal standing in root of repository to install dependencies.
 4. To run script, in terminal, stand in src folder and run "node ticketBooker.js".
-5. To run tests, run "npm test" in terminal.
+5. To run tests, in terminal, run "npm test".
