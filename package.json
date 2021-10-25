@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "test": "mocha --recursive --exit"
+    "script": "node ./src/index.js",
+    "api-test": "mocha ./api_test/apiTest.js",
+    "unit-test": "mocha ./test/unitTest.js"
   },
   "dependencies": {
     "chai": "^4.3.4",

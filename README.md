@@ -27,13 +27,16 @@ As for promo codes, the ones provided in the promoCodes.json file are just examp
 
 For use cases considered in this project, I validate that all inputs done by the user are inputs that represent options in the script, if an invalid input is entered the user is asked to retry the operation until a correct input is entered.
 
-For testing I'll use the Mocha framework in combination with the Chai assertion library to focus on testing the most important functions of the script :
+For unit testing, I'll use the Mocha framework in combination with the Chai assertion library to focus on testing the most important functions of the script :
 - getShortestTickets(tickets)
 - getCheapestTicket(shortestTickets)
+
+For API testing, I'll use the Mocha framework in combination with the Chai assertion library to automate 3 script runs covering the different values the ticket price can take according to extra baggage and discount code inputs.
 
 Installation and Execution
 1. Install node v16.1.0 and npm.
 2. Clone repository.
 3. Run "npm install" in terminal standing in root of repository to install dependencies.
-4. To run script, in terminal, stand in src folder and run "node ticketBooker.js".
-5. To run tests, in terminal, run "npm test".
+4. To run script, in terminal, run "npm run script".
+5. To run unit tests, in terminal, run "npm unit-test".
+6. To run API tests, in terminal, run "npm api-test"
