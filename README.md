@@ -38,5 +38,5 @@ Installation and Execution
 2. Clone repository.
 3. Run "npm install" in terminal standing in root of repository to install dependencies.
 4. To run script, in terminal, run "npm run script".
-5. To run unit tests, in terminal, run "npm unit-test".
-6. To run API tests, in terminal, run "npm api-test"
+5. To run unit tests, in terminal, run "npm run unit-test".
+6. To run API tests, in terminal, run "npm run api-test"
